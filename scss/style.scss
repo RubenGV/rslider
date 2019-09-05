@@ -1,0 +1,57 @@
+html {
+  background: darkgrey;
+  font-family: "Open Sans";
+  font-size: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.slider {
+  position: relative;
+  &__slide-box {
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  &__slide-container {
+    position: relative;
+  }
+
+  &__slide {
+    padding: 20px;
+    width: calc(100vw - 20px);
+    float: left;
+
+    &__container {
+      display: flex;
+      position: relative;
+    }
+
+    &__half {
+      &.--lft {
+        order: 0;
+      }
+      &.--rgt {
+        order: 1;
+      }
+    }
+
+    &__titulo {
+      font-size: 40px;
+    }
+  }
+
+  .rslider-bullets {
+    font-size: 22px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .slider {
+    &__slide {
+      width: 80vw;
+    }
+  }
+}
